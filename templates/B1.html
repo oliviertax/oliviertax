@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/back.css">
+	<title>Личный кабинет</title>
+</head>
+<body>
+    <header class="header">
+<div class="container">
+<div class="header_inner">
+    <div class="logo">Espanola</div>
+    <nav class="nav">
+        <a class="nav_link" href="/">Главная</a>
+        <div class="form2">
+          <a class="nav_link" href="/teacher">Весь список</a>
+          <a class="nav_link" href="/A1">A1</a>
+          <a class="nav_link" href="/A2">A2</a>
+          <a class="nav_link" href="/B1">B1</a>
+          <a class="nav_link" href="/B2">B2</a>
+          <a class="nav_link" href="/C1">C1</a>
+          <a class="nav_link" href="/C2">C2</a>
+        </div>
+    </nav>
+</div>
+</div>
+</header>
+<style type="text/css">
+
+  th, td {
+    font-size: 18px;
+    padding: 10px;
+  }
+  th {
+    background: #0e0909;
+    color: #ffffff;
+  }
+  td {
+    background: #0c0b0b;
+  }
+
+  td:nth-child(7) > a {
+    color: #c22a2a;
+  }
+
+  input, textarea {
+    padding: 10px;
+    display: block;
+    min-height: 30px;
+    width: 250px;
+    margin-bottom: 10px;
+  }
+  textarea {
+    resize: vertical;
+    height: 80px;
+  }
+ body {
+ font-family: Times;
+ }
+ #center { position: absolute; right: 0; left: 30%; top: 150px; width: 60%; }
+ .text-justify {
+  text-align: justify;
+ }
+    </style>
+
+<div class="intro">
+  <!-- <div style="margin-left: 100px; margin-top: 40px;" class="form1"> 
+    <input type="text" name="ID"  class="inpt"  placeholder="ID ученика для изменения группы">
+    <input type="text" name="Groups"  class="inpt"  placeholder="Группа">
+     <button style="margin-left: 45px;" type="submit" class="btn btn-danger" onclick="Change()">Изменить</button>
+  </div> -->
+    <div class="intro_inner">
+      <div id="center" >
+<h1 style="margin-left: -70px;">Список всех учеников</h1>
+    <table style="margin-top: -80px;position: relative;margin-right: 500px;">
+       
+      <tr>
+        <th>ID</th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Отчество</th>
+        <th>Email</th>
+        <th>Телефон</th>
+        <th>Группа</th>
+        <th>Курс</th>
+        <!-- <th>&#10006;</th> -->
+      </tr>
+      {{range .Massiv}}
+        <tr>
+        <td> {{.ID}}</td>
+          <th>{{.FirstName}}</th>
+          <th>{{.LastName}}</th>
+          <th>{{.ThirdName}}</th>
+          <th>{{.Email}}</th>
+          <th>{{.Phone}}</th>
+          <th>{{.Groups}}</th>
+          <th>{{.Kyrs}}</th>
+          <td>|
+            <a href="/edit/{{.ID}}">Изменить</a>
+            <a href="/teacher/delete/{{.ID}}" onclick="Relocate ()">Удалить</a>
+            <script src="/assets/js/delete.js"></script>
+        </td>
+          </td>
+                  
+      </tr>
+      {{end}}
+    </table>
+  </div>
+    </div>
+  </div>
+
+  
+
+
+</body>
+</html>

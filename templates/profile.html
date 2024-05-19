@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/profile1.css">
+	<script src="/assets/js/registration.js"></script>
+	<title>Личный кабинет</title>
+    <style type="text/css">
+
+        #uploadframe { display:none; }
+     </style> 
+   <script type="text/javascript" src="/assets/js/functions.js"></script>
+</head>
+<body>
+    <header class="header">
+<div class="container">
+<div class="header_inner">
+    <div class="logo">Espanola</div>
+    <nav class="nav">
+        <a class="nav_link" href="/">Главная</a>
+    </nav>
+</div>
+</div>
+</header>
+
+<div class="intro">
+        <div class="services" style="color:#ffffff; margin-top: 100px;">
+            
+           
+        <div class="form" style="margin-top: 0px; margin-left: 50px;font-size: 24px;">
+            <img class="about_item" src="{{.Avatar}}" style="width: 40%;height: 25%;margin-left: 330px;margin-bottom: -150px; " >
+<h2>Учащийся</h2>
+{{range .Massiv}}
+{{end}} 
+<p style=" font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Имя:{{.FirstName}}</p>
+<div id="elem">
+<p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Фамилия:{{.LastName}}</p>
+</div>
+<p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Отчество:{{.ThirdName}}</p>
+<p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Телефон:{{.Phone}}</p>
+<p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Email:{{.Email}}</p>
+<p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Группа:{{.Groups}}</p>
+<p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Курс:{{.Kyrs}}</p>
+<!-- <input type="text" class="inpt" placeholder="Для добавления вашего фото вставьте URL фото" name="Avatar">
+<button onclick="UpdatePhoto()">Добавить</button> -->
+
+<!-- <img class="photo" src="/front/uploads/ras.jpg" style="width: 20%;margin-left: 1000px; margin-top: -280px; " > -->
+</div>
+<!-- <form style="position: relative; left:-3%;" action="/vendor/signup.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="Avatar">
+    <input type="submit" value="Отправить файл">
+</form> -->
+
+
+<div class="services_item" style=" margin-left: 20%;position: static;">
+    
+<h2 style="margin-left: 15%;">Расписание занятий на неделю : </h2> <br>
+    <img class="about_item" src="/front/uploads/raspisanie.jpg" style="width: 70%;margin-top: -0%;"  >    
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div style=" border-left: px solid grey;  top: 0px;background-color: #212121">
+    <hr>
+    <p style=" position: relative; color: #ffffff; font-size: 16px;"> Школа Иcпанского Языка</p>
+    <p style=" position: relative;  color: #ffffff; font-size: 16px;"> Адрес:   Россия, Г. Липецк, Авиационная д.2А</p>
+    <p style=" position: relative;  color: #ffffff; font-size: 16px;"> Телефон: 8(999)787-04-34</p>
+    <p style="  position: relative; color: #ffffff;  font-size: 16px;"> Email: espanola48@gmail.com</p>
+    <br>
+   </div>
+</body>
+</html>

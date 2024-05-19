@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Регистрация</title>
+        
+      
+        <link rel="stylesheet" href="/assets/css/regdawdwada.css"/>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+       
+    </head>
+    
+    <body>
+		
+
+
+		<header class="header">
+			
+			<div class="header_inner">
+				<div class="logo">Espanola</div>
+				<nav class="nav">
+					<a class="nav_link" href="/">Главная</a>
+				</nav>
+			</div>
+			
+			</header>
+			
+<section class="container">
+		    <article class="half">
+			        <h1 style="margin-top: -20px;">Espanola</h1>
+                    <div class="tabs" style="margin-top: 40px;">
+						<h1 >Регистрация</h1>
+                        </div>
+			        
+			        <div class="content">
+                       
+                        <div class="form"> 
+                            <input id="Login" type="text" name="Login"  class="inpt" minlength="2" maxlength="16" required placeholder="Логин">
+                            <input id="Password" type="password" name="Password" class="inpt" minlength="8" maxlength="20" required placeholder="Пароль">
+							<!-- <input id="confirm-password" class="inpt" type="password" name="pass_confirm" minlength="8" maxlength="20" required placeholder="Подтвердите пароль"> -->
+                            <input type="text" name="FirstName"  class="inpt" required placeholder="Имя">
+                            <input type="text" name="LastName"  class="inpt" required placeholder="Фамилия">
+                            <input type="text" name="ThirdName"  class="inpt" placeholder="Отчество">
+                            <input type="email" name="Email"  class="inpt" minlength="6" maxlength="26" required placeholder="Email">
+                            <input id="online_phone" required name="Phone" class="inpt" type="tel" maxlength="50"
+				   autofocus="autofocus" required="required"
+				   value="+7(___)___-__-__"
+				   pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+				   placeholder="+7(___)___-__-__">
+		  <script type="text/javascript">
+			function setCursorPosition(pos, e) {
+			  e.focus();
+			  if (e.setSelectionRange) e.setSelectionRange(pos, pos);
+			  else if (e.createTextRange) {
+				var range = e.createTextRange();
+				range.collapse(true);
+				range.moveEnd("character", pos);
+				range.moveStart("character", pos);
+				range.select()
+			  }
+			}
+		  
+			function mask(e) {
+			  //console.log('mask',e);
+			  var matrix = this.placeholder,// .defaultValue
+				  i = 0,
+				  def = matrix.replace(/\D/g, ""),
+				  val = this.value.replace(/\D/g, "");
+			  def.length >= val.length && (val = def);
+			  matrix = matrix.replace(/[_\d]/g, function(a) {
+				return val.charAt(i++) || "_"
+			  });
+			  this.value = matrix;
+			  i = matrix.lastIndexOf(val.substr(-1));
+			  i < matrix.length && matrix != this.placeholder ? i++ : i = matrix.indexOf("_");
+			  setCursorPosition(i, this)
+			}
+			window.addEventListener("DOMContentLoaded", function() {
+			  var input = document.querySelector("#online_phone");
+			  input.addEventListener("input", mask, false);
+			  input.focus();
+			  setCursorPosition(3, input);
+			});
+		  </script>
+		 <style>
+			#file-upload { 
+			  display: none;
+			}
+		  </style>
+		  <input type="file" name="Avatar" id="file-upload"/>
+		  <button onclick="document.getElementById('file-upload').click()">Загрузить фото</button>
+		</label>
+		  	
+		  <!-- <input type="text" class="inpt" placeholder="Для добавления вашего фото вставьте URL фото" name="Avatar"> -->
+                            <select type="text" name="Kyrs">
+                            <option value disabled selected>Введите курс при его наличии</option>
+                            <option></option>
+                            <option>Beginner</option>
+                            <option>Elementary</option>
+                            <option>Pre-Intermediate</option>
+                            <option>Intermediate</option>
+                            <option>Upper-Intermediate</option>
+                            <option>Advanced</option>
+                            </select>     
+                            <button type="submit" style="margin-top: px;" onclick="Reg()">Зарегистрироваться</button>
+                            <script src="/assets/js/registration.js"></script>
+                            <div style="margin-left: 10px; margin-top: px ; font-size: 15px;">
+                                <p>Уже есть аккаунт ? <a style="text-decoration: none;" href="/authorization">Авторизоваться</a></p>
+                               </div>  
+							   
+                            
+                        </div>
+		    </article>
+		    <div class="half bg"></div>
+	</section>
+    </body>
+</html>
+
+
+<!-- style="position: relative; left:60%; top: 120px;" action="" method="post" enctype="multipart/form-data" -->
+				            <!-- <span class="tab signin active"><a href="auth.html">Sign in</a></span>
+				            <span class="tab signup"><a href="reg.html">Sign up</a></span> -->
+
+                            <!-- <div class="form">
+                                <input type="text" name="Login"  class="inpt"  placeholder="Email">
+                                <input type="password" name="Password" class="inpt"placeholder="Пароль">
+                                            <input type="text" name="FirstName"  class="inpt" placeholder="Имя">  
+                                            <input type="text" name="LastName"  class="inpt" placeholder="Фамилия">                 
+                                                <button onclick="Reg()">Зарегистрироваться</button>
+                                                <script src="/assets/js/registration.js"></script>
+                                            </div>
+                                               <div style="margin-left: 18px;">
+                                                <h5>Уже есть аккаунт ? <a style="text-decoration: none;" href="/auth">Авторизоваться</a></h5>
+                                               </div>  -->

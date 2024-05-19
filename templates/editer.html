@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/assets/css/back.css">
+        <title>Изменить группу и курс ученика</title>
+    </head>
+    <body>
+        <h3>Изменить группу и курс ученика</h3>
+        <!-- <table style="margin-top: 300px; text-align: center">
+       
+            <tr>
+              <th>ID</th>
+              <th>Имя</th>
+              <th>Email</th>
+              <th>Телефон</th>
+              
+            </tr>
+            {{range .Massiv}}
+              <tr>
+                
+                <td> {{.ID}}</td>
+                <th>{{.FirstName}}</th>
+                <th>{{.LastName}}</th>
+                <th>{{.ThirdName}}</th>
+                <th>{{.Email}}</th>
+                <th>{{.Phone}}</th>
+                <th>{{.Groups}}</th>
+                <th>{{.Kyrs}}</th>
+                
+                             
+            </tr>
+            {{end}}
+          </div> -->
+        <div class="form">
+            {{range .Massiv}}
+            <label>ID</label><br>
+            <input type="text" name="ID" class="inpt" value="{{.ID}}" /><br><br>
+            <label>Группа</label><br>
+            <input type="text" name="Groups" class="inpt" value="{{.Groups}}" /><br><br>
+            <label>Курс</label><br>
+            <input type="text" name="Kyrs" class="inpt" value="{{.Kyrs}}" /> <br><br>
+            <!-- <a href="/user/editx/{{.ID}}">Изменить</a>       -->
+            <button style="margin-left: 45px;" type="submit" class="btn btn-danger" onclick="Edit()">Изменить</button>  
+            <script src="/assets/js/zayavka.js"></script>
+          </div>
+        {{end}}
+    </body>
+</html>

@@ -1,0 +1,211 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    background-color: rgb(255, 255, 255);
+}
+
+.intro, .container {
+   
+    min-height: 1px;
+ }
+ @media (min-width: 992px) {
+  .aside {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    order: 1;
+  }
+  .main {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    order: 2;
+  }
+ }
+ @media (min-width: 1400px) {
+  .aside {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .main {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+ }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .5s ease-in-out;
+}
+h1,h2,h3,h4,h5 {
+    margin: 0;
+    
+}
+a {
+    margin: 0;
+}
+img {
+    display: block;
+    width: 100%;
+ }
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+    min-height: 1px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   height: 100vh;
+  
+   background: url("https://img.freepik.com/premium-vector/colorful-background-spanish-style-heritage-montheps_290522-1032.jpg") center no-repeat; ;
+  background-position: 50px 300px;
+  
+   
+}
+
+.intro_title {
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;  
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.intro_inner {
+    width: 100%;
+    max-width: 880px;
+    margin: -30px auto;
+    color: #fff;
+    margin-top: -200px;
+    text-align:right;
+}
+
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding-top: 20px;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000000;
+    margin-left: -260px;
+}
+
+.nav {
+    text-transform: uppercase;
+    margin-right: -300px;
+    
+}
+
+.nav_link {
+    font-size: 22px;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 14px;
+    color: #000000;
+    text-decoration: none;
+    transition: color .2s linear;
+}
+
+.nav_link:hover {
+
+    color: #fce38a
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+    margin-top: 20px;
+    border: 3px solid #fff;
+    font-size: 17px;
+    font-weight: 700;
+    color: #050404;
+    text-decoration: none;
+    transition: background .1s linear, color .1s linear;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    opacity: .9;
+    border: 3px solid #ffffff;
+    color: #333;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section_header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section_title {
+    font-size: 30px;
+    font-weight:700;
+    color: #333;
+}
+
+.section_title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto;
+    background-color:#333;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_item {
+    width: 30%;
+    justify-content: space-between;
+}
+
+.services {
+    display: flex;
+}
+
+.services_item {
+    flex: 1 1 0;
+}
+
+.section_gray {
+    background-color: #eb9e72;
+}
+
+.reviews {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+

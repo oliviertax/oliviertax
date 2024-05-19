@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/profile.css">
+	<script src="/assets/js/script1.js"></script>
+	<title>Личный кабинет</title>
+</head>
+<body>
+    <header class="header">
+<div class="container">
+<div class="header_inner">
+    <div class="logo">Espanola</div>
+    <nav class="nav">
+        <a class="nav_link" href="/">Главная</a>
+    </nav>
+</div>
+</div>
+</header>
+<div class="intro">
+    <div class="intro_inner">
+<h2>Учитель</h2>
+{{range .Massiv}}
+{{end}} 
+<p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Имя:{{.FirstName}}</p>
+<p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Фамилия:{{.LastName}}</p>
+<p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Отчество:{{.ThirdName}}</p>
+<p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Телефон:{{.Phone}}</p>
+<p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Email:{{.Email}}</p>
+<input type="text" class="inpt" placeholder="Для добавления вашего фото вставьте URL фото" name="Avatar">
+<button onclick="Reg()">Зарегистрироваться</button>
+<img class="photo" src="{{.Avatar}}" style="width: 20%;margin-left: 1000px; margin-top: -280px; " >
+
+<div >
+    <form enctype="multipart/form-data" action="ras.php" method="POST">
+    <p style="  font-family: Times; font-size: 24px;position: relative ;top: 0px; left: 0px;">Обновить общее расписание групп</p>
+    <p style="  font-family: Times; font-size: 12px;position: relative ;top: -10px; left: 0px;">Для того чтобы обновить расписание загрузите фото "ras.jpg"</p>
+    <input type="file" name="raspis">
+    <input type="submit" value="Отправить">
+    <p style="  font-family: Times; font-size: 12px;position: relative ;top: 10px; left: 0px;">Нынешнее расписание</p>
+    </form>
+    <img class="photo" style="position: relative;width: 650px; height: 324px;top: 15px; left: 0%;" src="/assets/raspisanie/ras.jpg?=<?php echo rand()?>">
+  </div>
+
+</div>
+<!-- <button ><a href="vendor/logout.php" class="logout" >Выход</a></button> -->
+</div>
+</body>
+</html>

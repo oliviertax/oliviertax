@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="stylesheet" href="/assets/ccsss/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';">
+	<link rel="stylesheet" href="/assets/ccsss/tilda-blocks-page7695711.min.css" type="text/css" media="all"
+	  onerror="this.loaderr='y';">
+	<script src="/assets/ccsss/tilda-scripts-3.0.min.js" charset="utf-8" defer="" onerror="this.loaderr='y';"></script>
+	<script src="/assets/ccsss/tilda-lazyload-1.0.min.js" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+	<script src="/assets/ccsss/tilda-zero-1.1.min.js" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+	<script src="/assets/ccsss/tilda-animation-ext-1.0.min.js" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+	<script src="/assets/ccsss/tilda-animation-sbs-1.0.min.js" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+	
+
+	  <link rel="stylesheet" id="sage/css-css" href="/assets/csst/englex23-main-850ad2256d.css" type="text/css" media="all"> 
+
+	<title>Регистрация</title>
+</head>
+<body>	
+	
+<header class="header">
+<div class="container">
+
+	<div class="header_inner">
+		
+		<div class="logo">Espanola</div>
+		<nav class="nav">
+			<a class="nav_link" href="/uch">Об учреждении</a>
+			<a class="nav_link" href="/test">Тест</a>
+
+			<a class="nav_link" href="/news">Создать пост</a>
+		
+		{{if eq .Operator true}}
+		<a class="nav_link" href="/operator">Заявки</a>
+		{{end}}
+
+		{{if eq .Teacher true}}
+		<a class="nav_link" href="/teacher">Учительская</a>
+		<a class="nav_link" href="/teacherprofile">Профиль</a>
+		{{end}}
+
+			{{if eq .Login false}}
+			<a class="nav_link" href="/reg">Регистрация</a>
+			<a class="nav_link" href="/authorization">Авторизация</a>
+			{{end}}
+				
+			{{if eq .Login true}}
+			<a class="nav_link" href="/profile">Профиль</a>
+			<a class="nav_link" style="cursor:pointer" onclick="Logout()" >Выйти</a>
+			<script src="/assets/js/logout.js"></script>
+			{{end}}
+		
+		</nav>
+	</div>
+</div>
+</header>
+	<div class="intro">
+		<div class="container">
+			<div class="intro_inner">
+				<!-- <div>
+				<button onclick="Logout()">Выход</button>
+				<script src="/assets/js/logout.js"></script>
+			</div> -->
+	<h1 class="intro_title">Настоящий испанский <br> в нашей школе </h1>
+	<h2 class="intro_subtitle">Онлайн-обучение
+		испанскому языку в группах <br> <h2 class="poloska" style="margin-left: 50px;font-size: 34px;">или один на один
+		с преподавателем</h2></h2>
+		<div style="display: none;">
+		{{if ne .Admin true}}
+		</div>
+		<a class="btn" href="#" style="margin-left: -20px"  onclick="Scroll()">УЗНАТЬ БОЛЬШЕ</a>
+		
+		<div style="display: none;">
+		{{end}}
+	</div>
+		</div>
+	</div>
+	
+</div>
+	
+<section class="section" >
+<div class="container">
+<div class="section_header">
+<h1 class="section_title" style="padding-top: 50px;">Индивидуальные занятия</h1> 
+</div>
+
+<div class="about">
+<div class="about_item"> <img style="width: 16%;margin-left: -55px;margin-top: -5px; "  src="https://sun9-5.userapi.com/impg/EtOiu4HVX69MKamPukei1lFAqHoiJpJz6dE4dg/Vwvlb0NsN0U.jpg?size=50x41&quality=96&sign=ed815c17513ce14af1c2a760cfb82631&type=album" alt=""><div style="margin-top: -55px; font-size: 16px;"><h2>Для переезда</h2><h3>Вы сможете без посредников решать многие вопросы : поход в банк,оформление документов,вызов сантехника и т.п. </h3></div></div>
+<div class="about_item" style="margin-right: 420px;margin-top: -15px;"><img style="width: 11%;margin-left: -50px; margin-bottom: 15px;" src="https://sun9-64.userapi.com/impg/K2VXUVCz0AvHkMeJIF-q6HisQD8JEhv2Xosy_g/fYU04RlnguI.jpg?size=43x50&quality=96&sign=5ccbf0936c050a01e8c1dff724f99cb4&type=album" alt=""><div style="margin-top: -60px; font-size: 16px;"><h2>Для путешествий</h2><h3>Испанский заменяет английский.Во<br>Франции,Англии,Италии,США,Канаде,<br>Австралии,Марокко и других странах<br>школьники вторым языком изучают<br>испанский язык.</h3></div></div></div>
+<div class="about_item" style="margin-left: 830px;margin-top: -185px;"><img style="width: 12%;margin-left: -55px; margin-bottom: 15px;" src="https://sun9-40.userapi.com/impg/-XXinq4_O3wKoRawWLNWOg6jRX_EYep-OX57YA/cV1XEfiYqPw.jpg?size=53x52&quality=96&sign=e01f44385d8ce9c65a6e22916c1c7ec4&type=album" alt=""><div style="margin-top: -60px; font-size: 16px;"><h2>Для работы</h2><h3>Второй иностранный язык позволит<br>продвинуться по карьерной лестнице.<br>Английского языка уже не достаточно. </h3></div></div>
+<div class="about_item" style="margin-left: 420px;margin-top: 80px;"><img style="width: 12%;margin-left: -55px; margin-bottom: 15px;" src="https://sun9-46.userapi.com/impg/4pKFTn4xB3uH4tTbPIHIBcKdUBJVEDRzf690lg/aUff7tlH2jo.jpg?size=47x54&quality=96&sign=046ad116e78af540c34cd578d3d26b70&type=album" alt=""><div style="margin-top: -60px; font-size: 16px;"><h2>Для сдачи экзамена</h2><h3>Сдать DELE,SIELE,подготовка к экзамену на получение гражданства,ЕГЭ,поступление в ВУЗ</h3></div></div>
+<img style="width: 17%;margin-left: 50px; margin-top: -155px;" src="https://hispablog.ru/wp-content/uploads/2013/08/Trip_to_Spain.png" alt="">
+<img style="width: 20%;margin-left: 850px; margin-top: -220px;" src="https://ichebnik.ru/images/logo/all.png" alt="">
+</div>
+</div>
+</section>
+	<section class="section" style="margin-top: -35px;">
+		<div class="container">
+		<div class="section_header">
+		<h1 class="section_title" >МЕТОДИКА</h1> 
+		</div>
+<div class="services" > 
+	<div class="services_item">
+		<img src="https://www.tokionline.com/images/2018/11/15/metodik1.png" style="width: 70%;" alt="">
+		<div class="services_text"><h2>Интуитивно понятные методические материалы</h2><h3 style="padding-top: 8px;">Современный интересный контент, учитывающий особенности изучения английского разными возрастными группами и на разных уровнях.</h3>
+		</div>
+	</div>
+	<div class="services_item">
+		<img src="https://www.tokionline.com/images/2018/11/15/person2.png" style="width: 70%;" alt="">
+		<div class="services_text"><h2>Персонализированный подход</h2><h3 style="padding-top: 8px;" >В зависимости от целей и потребностей - делаем акцент на конкретных навыках и дополняем курс специализированными темами, занимаясь в оптимальном для вас темпе.</h3>
+		</div>
+	</div>
+	<div class="services_item"><img src="https://www.tokionline.com/images/2022/10/07/person1.jpg" style="width: 70%;" alt="">
+		<div class="services_text"><h2>Бережная работа с мотивацией</h2><h3 style="padding-top: 8px;">Поддержка в преодолении неизбежных при обучении периодов демотивации.</h3>
+		</div></div>
+</div>
+
+	</div>
+	</section>
+	
+	<div id="rec528531130" class="r t-rec"  data-animationappear="off" data-record-type="396">
+		<style>
+			#rec528531130 .t396__artboard {
+				height: 450px;
+				background-image: linear-gradient(327deg, rgba(92, 96, 197, 1) 7%, rgba(190, 167, 231, 1) 27%, rgba(248, 214, 226, 1) 51%, rgba(248, 214, 226, 1) 71%, rgba(94, 201, 226, 1) 100%);
+			}
+	  
+			#rec528531130 .t396__filter {
+				height: 450px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1641830500437"] {
+				z-index: 2;
+				top: -630px;
+				left: calc(100% - 1200px + 490px);
+				width: 1200px;
+			}
+			#rec528531130 .tn-elem[data-elem-id="1641830692855"] {
+				z-index: 4;
+				top: 128px;
+				left: calc(100% - 125px + -462px);
+				width: 125px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1641830692875"] {
+				z-index: 5;
+				top: 295px;
+				left: calc(100% - 160px + -90px);
+				width: 160px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1641830692885"] {
+				z-index: 7;
+				top: 174px;
+				left: calc(100% - 85px + -547px);
+				width: 85px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1641830743624"] {
+				z-index: 6;
+				top: 130px;
+				left: calc(100% - 140px + -70px);
+				width: 140px;
+			}
+	  
+		 
+			#rec528531130 .tn-elem[data-elem-id="1641830985481"] {
+				color: #000000;
+				z-index: 8;
+				top: 55px;
+				left: calc(50% - 600px + 20px);
+				width: 560px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1641830985481"] .tn-atom {
+				color: #000000;
+				font-size: 60px;
+				font-family: 'Formular', Arial, sans-serif;
+				line-height: 1;
+				font-weight: 600;
+				background-position: center center;
+				border-color: transparent;
+				border-style: solid;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1641919314237"] {
+				z-index: 3;
+				top: 0px;
+				left: calc(100% - 420px + -112px);
+				width: 420px;
+			}
+	  
+		  
+			#rec528531130 .tn-elem[data-elem-id="1643313268755"] {
+				color: #ffffff;
+				text-align: center;
+				z-index: 9;
+				top: 350px;
+				left: calc(50% - 600px + 20px);
+				width: 200px;
+				height: 55px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1643313268755"] .tn-atom {
+				color: #ffffff;
+				font-size: 16px;
+				font-family: 'Formular', Arial, sans-serif;
+				line-height: 1.55;
+				font-weight: 500;
+				border-radius: 8px;
+				background-color: #000000;
+				background-position: center center;
+				border-color: transparent;
+				border-style: solid;
+				transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1643313488796"] {
+				color: #f0e8e8;
+				z-index: 10;
+				top: 205px;
+				left: calc(50% - 600px + 50px);
+				width: 399px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1643313488796"] .tn-atom {
+				color: #000000;
+				font-size: 14px;
+				font-family: 'Roboto', Arial, sans-serif;
+				line-height: 1.1;
+				font-weight: 400;
+				opacity: 0.55;
+				background-position: center center;
+				border-color: transparent;
+				border-style: solid;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1643313488798"] {
+				z-index: 11;
+				top: 200px;
+				left: calc(50% - 600px + 23px);
+				width: 23px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1643313488801"] {
+				color: #000000;
+				z-index: 12;
+				top: 235px;
+				left: calc(50% - 600px + 50px);
+				width: 399px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1643313488801"] .tn-atom {
+				color: #000000;
+				font-size: 14px;
+				font-family: 'Roboto', Arial, sans-serif;
+				line-height: 1.1;
+				font-weight: 400;
+				opacity: 0.55;
+				background-position: center center;
+				border-color: transparent;
+				border-style: solid;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1643313488803"] {
+				z-index: 13;
+				top: 230px;
+				left: calc(50% - 600px + 23px);
+				width: 23px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1643313488822"] {
+				color: #000000;
+				z-index: 14;
+				top: 265px;
+				left: calc(50% - 600px + 50px);
+				width: 399px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1643313488822"] .tn-atom {
+				color: #000000;
+				font-size: 14px;
+				font-family: 'Roboto', Arial, sans-serif;
+				line-height: 1.1;
+				font-weight: 400;
+				opacity: 0.55;
+				background-position: center center;
+				border-color: transparent;
+				border-style: solid;
+			}
+	  
+	  
+			#rec528531130 .tn-elem[data-elem-id="1643313488823"] {
+				z-index: 15;
+				top: 260px;
+				left: calc(50% - 600px + 23px);
+				width: 23px;
+			}
+		   #rec528531130 .tn-elem[data-elem-id="1643313488826"] {
+				color: #000000;
+				z-index: 16;
+				top: 295px;
+				left: calc(50% - 600px + 50px);
+				width: 399px;
+			}
+	  
+			#rec528531130 .tn-elem[data-elem-id="1643313488826"] .tn-atom {
+				color: #000000;
+				font-size: 14px;
+				font-family: 'Roboto', Arial, sans-serif;
+				line-height: 1.1;
+				font-weight: 400;
+				opacity: 0.55;
+				background-position: center center;
+				border-color: transparent;
+				border-style: solid;
+			}
+			#rec528531130 .tn-elem[data-elem-id="1643313488827"] {
+				z-index: 17;
+				top: 290px;
+				left: calc(50% - 600px + 23px);
+				width: 23px;
+			}
+	  
+	  
+		</style>
+		<div class="t396">
+			<div class="t396__artboard" 
+				>
+				<div class="t396__carrier" ></div>
+				<div class="t396__filter" ></div>
+				<div class="t396__elem tn-elem tn-elem__5285311301641830500437" data-elem-id="1641830500437"
+					>
+					<div class="tn-atom"><img class="tn-atom__img t-img"
+							data-original="https://static.tildacdn.com/tild3737-3064-4434-b165-376436623237/Ellipse_650.svg"
+							alt="" imgfield="tn_img_1641830500437"></div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301641830692855" data-elem-id="1641830692855"
+		   >
+					<div class="tn-atom"><img class="tn-atom__img t-img"
+							data-original="https://static.tildacdn.com/tild3239-3038-4338-b239-663938643063/1.svg"
+							alt="" imgfield="tn_img_1641830692855"></div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301641830692875" data-elem-id="1641830692875"
+				  >
+					<div class="tn-atom"><img class="tn-atom__img t-img"
+							data-original="https://static.tildacdn.com/tild6639-3737-4266-a366-336161346534/3.svg"
+							alt="" imgfield="tn_img_1641830692875"></div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301641830692885" data-elem-id="1641830692885"
+				   >
+					<div class="tn-atom"><img class="tn-atom__img t-img"
+							data-original="https://static.tildacdn.com/tild6466-3839-4037-b164-366366666439/Frame_95.svg"
+							alt="" imgfield="tn_img_1641830692885"></div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301641830743624" data-elem-id="1641830743624"
+				   >
+					<div class="tn-atom"><img class="tn-atom__img t-img"
+							data-original="https://static.tildacdn.com/tild6531-6566-4135-b232-393064613565/Group_3003.png"
+							alt="" imgfield="tn_img_1641830743624"></div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301641830985481" data-elem-id="1641830985481"
+				  >
+					<h2 class="tn-atom" field="tn_text_1641830985481">Запишитесь <br>на вводный урок</h2>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301641919314237 t-animate"
+					data-elem-id="1641919314237" data-elem-type="image" data-field-top-value="0"
+				   
+				   >
+					<div class="tn-atom"><img class="tn-atom__img t-img"
+							data-original="https://static.tildacdn.com/tild3530-6132-4332-a233-633237333861/shutterstock_1687632.png"
+							alt="" imgfield="tn_img_1641919314237"></div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301643313268755" data-elem-id="1643313268755"
+					> <a class="btn" href="#" style="margin-top: -10px; background-color: #000000;border-color: #000000;color: #ffffff;border-radius: 4%;"  onclick="Scroll()">Записаться</a></div>
+				<div class="t396__elem tn-elem tn-elem__5285311301643313488796" data-elem-id="1643313488796"
+					>
+					<div class="tn-atom" style="color: #000000; font-size: large;" field="tn_text_1643313488796">Познакомим со школой</div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301643313488798" data-elem-id="1643313488798"
+				   >
+					<div class="tn-atom"><img class="tn-atom__img t-img"
+							data-original="https://static.tildacdn.com/tild3965-3161-4665-a230-656564373961/photo.svg"
+							alt="" imgfield="tn_img_1643313488798"></div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301643313488801" data-elem-id="1643313488801"
+				>
+					<div class="tn-atom" style="color: #000000; font-size: large;" field="tn_text_1643313488801">Протестируем уровень знания языка</div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301643313488803" data-elem-id="1643313488803"
+				   >
+					<div class="tn-atom"><img class="tn-atom__img t-img"
+							data-original="https://static.tildacdn.com/tild3965-3161-4665-a230-656564373961/photo.svg"
+							alt="" imgfield="tn_img_1643313488803"></div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301643313488822" data-elem-id="1643313488822"
+			 >
+					<div class="tn-atom" style="color: #000000; font-size: large;" field="tn_text_1643313488822">Покажем платформу</div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301643313488823" data-elem-id="1643313488823"
+				   >
+					<div class="tn-atom"><img class="tn-atom__img t-img"
+							data-original="https://static.tildacdn.com/tild3965-3161-4665-a230-656564373961/photo.svg"
+							alt="" imgfield="tn_img_1643313488823"></div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301643313488826" data-elem-id="1643313488826"
+					>
+					<div class="tn-atom"  style="color: #000000; font-size: large;"field="tn_text_1643313488826">Подберем формат и программу обучения </div>
+				</div>
+				<div class="t396__elem tn-elem tn-elem__5285311301643313488827" data-elem-id="1643313488827"
+					>
+					<div class="tn-atom"><img class="tn-atom__img t-img"
+							data-original="https://static.tildacdn.com/tild3965-3161-4665-a230-656564373961/photo.svg"
+							alt="" imgfield="tn_img_1643313488827"></div>
+				</div>
+			</div>
+		</div>
+		<script>t_onReady(function () {
+				t_onFuncLoad('t396_init', function () {
+					t396_init('528531130');
+				});
+			});</script><!-- /T396 -->
+	  </div>
+
+
+<div class="section_header" style="padding-top: 70px;padding-bottom: 70px;margin-left: 700px;">
+	<h1 class="section_title">Разговаривай на уроке на <br>любимые темы</h1> 
+	<div class="section_text" style="font-size: 16px;margin-right: 100px;" >
+	<h3>Подбираем материалы и задания под ваши цели. Например,<br>переезд в Аргентину или учеба в Испании.Подготовим на любой<br>уровень A1-C2. Уроки с преподавателем испанского языка будут<br>интересными и не скучными. Мы следим, чтобы вы говорили<br>больше, чем преподаватель </h3>
+	<img style="width: 55%; margin-left: -350px; margin-top: -330px;" src="https://sun9-16.userapi.com/impg/tFJxWsZ1l7Cou0gB5P_zF8e6vGwI3ayO7pYpgg/T6-d4u-y2cA.jpg?size=516x335&quality=96&sign=23958da2d3fd3f415ce90ed494216854&type=album" alt="">
+	</div>
+	</div>
+	
+</main>
+
+
+</body>
+
+<!-- <div class="section_gray">
+	<div class="container" style="padding-top: 60px;padding-bottom: 60px;">
+		<div class="reviews" style="font-size: 18px;margin-left: 185px; text-align: center;">
+			<h1><div style="color: rgb(250, 247, 247); margin-right: 330px;">Наши</div><div  style="margin-top: -58px; color: black;">программы</div></h1>
+		</div>
+		
+			<div class="reviews_text" style="font-size: 22px;color: black; margin-left: px; margin-top: -30px;">
+				Разнообразные материалы (тексты, диалоги, ролевые игры) эффективно развивают ваши коммуникативные навыки и дают возможность применить их в искусственно созданной среде. Изучать иностранный язык можно легко и интересно.
+Занимайтесь онлайн с удовольствием индивидуально, в паре или в группе.
+Наши обучающие программы рассчитаны на детей от 5 лет и взрослых.
+			</div>
+		</div>
+		
+</div> -->
+
+
+<div class="za" style="padding-top: 20px;padding-bottom: 20px;">
+	<script>t_onReady(function () {
+	  t_onFuncLoad('t396_init', function () {
+		t396_init('409907218');
+	  });
+	  });</script>
+	
+	
+	<div id="rec528484737" data-animationappear="off">
+	
+	  <style>
+	
+	  #rec528484737 .tn-elem[data-elem-id="1641556963381"] {
+		z-index: 3;
+		top: 0px;
+		left: calc(50% - 640px + 0px);
+		width: 1280px;
+		height: 277px;
+	  }
+	
+	  #rec528484737 .tn-elem[data-elem-id="1641556963381"] .tn-atom {
+		border-radius: 14px;
+		background-color: #fbfcfe;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-color: transparent;
+		border-style: solid;
+	  }
+	
+	  #rec528484737 .tn-elem[data-elem-id="1641556963390"] {
+		color: #ffffff;
+		z-index: 4;
+		top: 83px;
+		left: calc(50% - 600px + 18px);
+		width: 707px;
+	  }
+	
+	 
+	
+	  #rec528484737 .tn-elem[data-elem-id="1641562860871"] {
+		z-index: 5;
+		top: 242px;
+		left: calc(50% - 640px + 0px);
+		width: 1280px;
+		height: 35px;
+	  }
+	
+	  #rec528484737 .tn-elem[data-elem-id="1641562860871"] .tn-atom {
+		border-radius: 14px;
+		background-color: #000000;
+		background-position: center center;
+		border-color: transparent;
+		border-style: solid;
+	  }
+	
+	  #rec528484737 .tn-elem[data-elem-id="1641562992052"] {
+		z-index: 6;
+		top: 242px;
+		left: calc(50% - 640px + 0px);
+		width: 1280px;
+		height: 10px;
+	  }
+	
+	  #rec528484737 .tn-elem[data-elem-id="1641562992052"] .tn-atom {
+		border-radius: 0px;
+		background-color: #000000;
+		background-position: center center;
+		border-color: transparent;
+		border-style: solid;
+	  }
+	
+	  #rec528484737 .tn-elem[data-elem-id="1642440165664"] {
+		z-index: 7;
+		top: 243px;
+		left: calc(50% - 600px + -39px);
+		width: 3190px;
+		height: 32px;
+	  }
+	
+	  
+	  #rec528484737 .tn-elem[data-elem-id="1642440165664"] .tn-atom {
+		border-width: 1px;
+		border-radius: 10px;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-color: transparent;
+		border-style: solid;
+	  }
+	
+	  #rec528484737 .tn-elem[data-elem-id="1642444410754"] {
+		z-index: 8;
+		top: 155px;
+		left: calc(50% - 600px + 20px);
+		width: 1161px;
+	  }
+	
+	  
+	  </style>
+	  <div class="t396" style="position: relative;">
+	  <div class="t396__artboard" data-artboard-recid="528484737" data-artboard-screens="320,480,640,960,1200"
+	   
+	  >
+		<div class="t396__elem tn-elem tn-elem__5284847371641556963381" data-elem-id="1641556963381">
+		<div class="tn-atom t-bgimg"
+		  data-original="https://static.tildacdn.com/tild6638-6266-4537-a264-613532343330/photo.png"></div>
+		</div>
+		<div class="t396__elem tn-elem tn-elem__5284847371641556963390" data-elem-id="1641556963390" >
+		<h1 style="font-size: 40px;">Запишитесь на вводный урок</h1>
+		</div> 
+		<div class="t396__elem tn-elem tn-elem__5284847371641562860871" data-elem-id="1641562860871" >
+		<div class="tn-atom"></div>
+		</div>
+		<div class="t396__elem tn-elem tn-elem__5284847371641562992052" data-elem-id="1641562992052">
+		<div class="tn-atom"></div> 
+		</div>
+		<div class="t396__elem tn-elem tn-elem__5284847371642440165664 " data-elem-id="1642440165664"
+		data-elem-type="shape" data-field-top-value="243" data-field-left-value="-39" data-field-height-value="32"
+		data-field-width-value="3190" data-field-axisy-value="top" data-field-axisx-value="left"
+		data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px"
+		data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-mobile="y"
+		data-animate-sbs-event="intoview" data-animate-sbs-trg="1" data-animate-sbs-trgofst="0"
+		data-animate-sbs-loop="loop"
+		data-animate-sbs-opts="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':20000,'mx':-1462,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'}]"
+		data-field-top-res-320-value="486" data-field-left-res-320-value="-20" data-field-height-res-320-value="32"
+		data-field-width-res-320-value="1596" data-field-container-res-320-value="grid"
+		data-animate-sbs-opts-res-320="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':20000,'mx':-1121,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'}]"
+		data-field-top-res-480-value="521" data-field-left-res-480-value="0" data-field-height-res-480-value="32"
+		data-field-width-res-480-value="2000"
+		data-animate-sbs-opts-res-480="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':20000,'mx':-887,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'}]"
+		data-field-top-res-640-value="532" data-field-left-res-640-value="9" data-field-height-res-640-value="30"
+		data-field-width-res-640-value="2791"
+		data-animate-sbs-opts-res-640="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':20000,'mx':-1278,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'}]"
+		data-field-top-res-960-value="239" data-field-left-res-960-value="-11" data-field-axisy-res-960-value="top">
+		<div class="tn-atom t-bgimg"
+		  data-original="https://static.tildacdn.com/tild3732-3264-4834-a166-353062643132/loooong.svg"></div>   
+		</div>
+		<div class="t396__elem tn-elem form tn-elem__5284847371642444410754" data-elem-id="1642444410754"
+		 >
+		<div class="tn-atom tn-atom__form"> <div class="form" style="margin-left: 0px;margin-top: 20px;position: absolute;">
+		  <input style="margin-left: 300px;margin-bottom: -35px; border-radius: 4%;" type="text" name="Email" class="inpt"
+		  placeholder="E-mail">
+		  <input style="margin-left: 0px;margin-top: -40px;" type="text" name="Name" class="inpt" placeholder="Имя">
+		<input style="margin-left: 600px;margin-top: -55px;"  id="online_phone" name="Phone" class="inpt" type="tel"
+		maxlength="50" value="+7(___)___-__-__"
+		pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+		placeholder="+7(___)___-__-__">
+		<script type="text/javascript">
+		  
+		  function mask(e) {
+		  //console.log('mask',e);
+		  var matrix = this.placeholder,// .defaultValue
+
+		  matrix = matrix.replace(/[_\d]/g, function(a) {
+		  return val.charAt(i++) || "_"
+		  });
+		  this.value = matrix;
+		  i = matrix.lastIndexOf(val.substr(-1));
+		  i < matrix.length && matrix != this.placeholder ? i++ : i = matrix.indexOf("_");
+		  setCursorPosition(i, this)
+		  }
+		  window.addEventListener("DOMContentLoaded", function() {
+		  var input = document.querySelector("#online_phone");
+		  input.addEventListener("input", mask, false);
+		 
+		  setCursorPosition(3, input);
+		  });
+		  </script>
+		<button type="submit" style="margin-top: -53px;left: 900px;position: absolute;background-color: #000000;border-color: #000000;color: #ffffff;border-radius: 4%;" class="btn2 btn2-danger" onclick="Zayavka()">Отправить</button>
+	  </div>
+		  <script src="/assets/js/zayavka.js"></script>
+	
+		</div>
+		</div>
+		</div>
+		
+	  </div>
+	  
+	  </div>
+	  <script
+	  type="text/javascript">function t_onReady(func) {
+		if (document.readyState != 'loading') {
+		func();
+		} else {
+		document.addEventListener('DOMContentLoaded', func);
+		}
+	  }
+	 </script>
+	  <script>t_onReady(function () {
+		t_onFuncLoad('t396_init', function () {
+		t396_init('528484737');
+		});
+	  });</script><!-- /T396 -->
+	  </div>
+
+<div style=" border-left: px solid grey;  top: 0px;background-color: #212121">
+    <hr>
+    <p style=" position: relative; color: #ffffff; font-size: 16px;"> Школа Иcпанского Языка</p>
+    <p style=" position: relative;  color: #ffffff; font-size: 16px;"> Адрес:   Россия, Г. Липецк, Авиационная д.2А</p>
+    <p style=" position: relative;  color: #ffffff; font-size: 16px;"> Телефон: 8(999)787-04-34</p>
+    <p style="  position: relative; color: #ffffff;  font-size: 16px;"> Email: espanola48@gmail.com</p>
+    <br>
+   </div>
+</html>
+<!-- <nav class="nav">
+	<a class="nav_link" href="/uch">Об учреждении</a>
+	<a class="nav_link" href="/test">Тест</a>
+
+<div style="display: none;">{{if ne .Operator true}}</div>
+
+<a class="nav_link" href="/operator">Заявки</a>
+<div style="display: none;">
+	{{end}}
+</div>
+<div style="display: none;">{{if ne .Teacher true}}</div>
+<a class="nav_link" href="/teacher">Учительская</a>
+<div style="display: none;">
+	{{end}}
+</div>
+	<div style="display: none;">
+	{{if ne  .IsLogin false}}
+</div >
+	<a class="nav_link" href="/reg">Регистрация</a>
+	<a class="nav_link" href="/authorization">Авторизация</a>
+<div style="display: none;">
+	{{end}}
+</div>
+<div style="display: none;">
+	{{if ne  .IsLogin true}}
+</div>
+	<a class="nav_link" href="/profile">Профиль</a>
+	<a class="nav_link" style="cursor:pointer" onclick="Logout()" >Выйти</a>
+	<script src="/assets/js/logout.js"></script>
+	<div style="display: none;">
+	{{end}}
+</div>
+</nav> -->
+
+
+<!-- Вводный урок -->
+<!-- <div class="intro-lesson-block"><div class="section-content"><div class="content-wrapper"><div class="image-wrapper">
+	<img loading="lazy" class="img-fluid" src="/assets/images/icon-freelesson.png" srcset="images/icon-freelesson%402x.png 2x"></div><div class="h3-title title">Вводный урок — <br>бесплатно!</div><div class="text-small description d-md-none d-xl-block">Познакомьтесь с преподавателем, узнайте свой уровень английского и выберите подходящий курс обучения на пробном уроке в нашей онлайн-школе</div><div class="btn-wrapper">
+	<button type="button" class="btn3 btn3-danger" data-toggle="modal" data-target="#gformModal-21">
+	Записаться</button></div></div></div></div>		 -->

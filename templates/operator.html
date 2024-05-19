@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/back.css">
+	<title>Личный кабинет</title>
+</head>
+<body>
+    <header class="header">
+<div class="container">
+<div class="header_inner">
+    <div class="logo">Espanola</div>
+    <nav class="nav">
+        <a class="nav_link" href="/">Главная</a>
+    </nav>
+</div>
+</div>
+</header>
+<style type="text/css">
+
+th, td {
+    font-size: 18px;
+    padding: 10px;
+  }
+  th {
+    background: #0e0909;
+    color: #ffffff;
+  }
+  td {
+    background: #0c0b0b;
+  }
+
+  td:nth-child(7) > a {
+    color: #c22a2a;
+  }
+
+  input, textarea {
+    padding: 10px;
+    display: block;
+    min-height: 30px;
+    width: 250px;
+    margin-bottom: 10px;
+  }
+  textarea {
+    resize: vertical;
+    height: 80px;
+  }
+ body {
+ font-family: Times;
+ }
+ #center { position: absolute; right: 0; left: 40%; top: 300px; width: 60%; }
+ .text-justify {
+  text-align: justify;
+ }
+    </style>
+<div class="intro">
+    <div class="intro_inner">
+      <h2 style="color: #0c0b0b;margin-bottom: 40%;margin-right: 35%;font-size: 27px;">Таблица с заявками</h2>
+<div id="center" >
+
+<!--   
+<div style="justify-content: left;" class="form">
+  <input style="margin-left: 550px;" type="text" name="id" class="inpt"  placeholder="Введите ID для удаления">					                    
+<button  style="margin-right: 410px;" type="submit" class="btn btn-danger" onclick="Delete()">Удалить</button>
+<script src="/assets/js/zayavka.js"></script>
+</div> -->
+<!-- <div style="justify-content: left;" class="form">
+  <input style="margin-left: 550px;" type="text" name="Name" class="inpt"  placeholder="Введите ID для редактирования">					                    
+<button  style="margin-right: 410px;" type="submit" class="btn btn-danger" onclick="Change()">Изменить</button>
+<script src="/assets/js/delete.js"></script>
+</div> -->
+<!-- <div style="margin-left: -400px;" class="form1"> 
+  <input type="text" name="ID"  class="inpt"  placeholder="Выберите ID клиента для изменения">
+  <input type="text" name="Login"  class="inpt"  placeholder="Логин">
+   <input type="password" name="Password" class="inpt"placeholder="Пароль">
+   <input type="text" name="FirstName"  class="inpt" placeholder="Имя">
+   <input type="text" name="LastName"  class="inpt" placeholder="Фамилия">
+   <input type="text" name="ThirdName"  class="inpt" placeholder="Отчество">
+  <input type="text" name="Email"  class="inpt"  placeholder="Email">
+  <input type="text" name="Phone"  class="inpt"  placeholder="Phone">
+   <button style="margin-left: -300px;" type="submit" class="btn btn-danger" onclick="Change()">Изменить</button>
+</div> -->
+
+    <table style="margin-top: -80px;position: relative;">
+       
+      <tr>
+        <th>ID</th>
+        <th>Имя</th>
+        <th>Email</th>
+        <th>Телефон</th>
+        <!-- <th>&#10006;</th> -->
+      </tr>
+      {{range .Massiv}}
+        <tr>
+        <td> {{.ID}}</td>
+          <th>{{.Name}}</th>
+          <th>{{.Email}}</th>
+          <th>{{.Phone}}</th>
+          <td>|
+            <a href="/operator/delete/{{.ID}}" onclick="Relocate ()">Удалить</a>
+            <script src="/assets/js/delete.js"></script>
+        </td>          
+            <!-- <a href="/user/delete/{{.ID}}">Удалить</a> -->
+          </td>
+                  
+      </tr>
+      {{end}}
+
+   
+    </div>
+    
+    </table>
+
+  </div>
+  </div>
+
+</div>
+
+</div>
+
+</body>
+<footer style=" border-left: px solid grey;  top: 0px;background-color: #212121">
+
+  <hr>
+  <p style=" position: relative; color: #ffffff; font-size: 16px;"> Школа Иcпанского Языка</p>
+  <p style=" position: relative;  color: #ffffff; font-size: 16px;"> Адрес:   Россия, Г. Липецк, Авиационная д.2А</p>
+  <p style=" position: relative;  color: #ffffff; font-size: 16px;"> Телефон: 8(999)787-04-34</p>
+  <p style="  position: relative; color: #ffffff;  font-size: 16px;"> Email: espanola48@gmail.com</p>
+  <br>
+</footer>
+</html>
